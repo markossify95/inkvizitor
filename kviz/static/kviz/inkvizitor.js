@@ -12,7 +12,6 @@ function getWord(type) {
     return msg;
 };
 
-
 $(document).ready(function () {
     $('.selection').click(function () {
         $('.selection').attr('disabled', 'disabled');
@@ -136,3 +135,22 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.top_ten').click(function () {
+        window.location.assign("http://127.0.0.1:8000/quiz/top/");
+    });
+});
+
+$(document).ready(function () {
+    $('.login_button').click(function () {
+        window.location.assign("http://127.0.0.1:8000/lo/");
+    });
+});
+
+function register() {
+    window.location.assign("http://127.0.0.1:8000/register/");
+};
+
+function login() {
+    window.location.assign("http://127.0.0.1:8000/login/");
+};

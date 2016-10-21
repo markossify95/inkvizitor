@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Registruj se</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="register.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="inkvizitor.js"></script>
-    </head>
-    <body>
-        <div class="register_form">
-            <form class="register_form">
-                <p>e-mail:</p>
-                <input type="text" class="mail">
-                <p>Korisnicko ime:</p>
-                <input type="text" class="make_username">
-                <p>Ime:</p>
-                <input type="text" class="make_name">
-                <p>Prezime</p>
-                <input type="text" class="make_lastname">
-                <p>Lozinka:</p>
-                <input type="text" class="make_password"> <br><br>
-                <button type="submit" class="register">Registruj se</button>
-                <button type="submit" class="go_login">Uloguj se</button> 
-            </form>
+<head>
+    <title>Registruj se</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/register.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'kviz/inkvizitor.js' %}"></script>
+</head>
+<body>
+
+<div class="register_form">
+    <form method="post" class="register_form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.errors }}
+        <p>Korisnicko ime:</p>
+        <div class="django-element">
+            {{ form.username }}
         </div>
-    </body>
+        <p>Ime:</p>
+
+        <div class="django-element">
+            {{ form.first_name }}
+        </div>
+        <p>Prezime:</p>
+
+        <div class="django-element">
+            {{ form.last_name }}
+        </div>
+        <p>e-mail:</p>
+
+        <div class="django-element">
+            {{ form.email }}
+        </div>
+        <p>Lozinka:</p>
+
+        <div class="django-element">
+            {{ form.password }}
+        </div>
+
+        <button type="submit" class="register">Registruj se</button>
+        <!--
+        <p>e-mail:</p>
+        <input type="text" class="mail">
+        <p>Korisnicko ime:</p>
+        <input type="text" class="make_username">
+        <p>Ime:</p>
+        <input type="text" class="make_name">
+        <p>Prezime</p>
+        <input type="text" class="make_lastname">
+        -->
+    </form>
+</div>
+<button type="submit" class="go_login" onclick="login()">Uloguj Se</button>
+</body>
 </html>

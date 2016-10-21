@@ -6,6 +6,7 @@ from django.contrib.auth import views as auth_views
 # /quiz/...
 urlpatterns = [
     url(r'^$', views.game_view, name='game'),
+    url(r'^top/$', views.rang_list_view, name='ranglist'),
     url(r'^score/$', views.score_update_view, name='increment-score'),
     url(r'^word/(?P<pk>\d+)/$', views.WordView.as_view(), name='word'),
 ]

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Login</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static "accounts/login.css" %}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="{% static "kviz/inkvizitor.js" %}"></script>
-    </head>
-    <body>
-        <div class="login">
-            <form method="post" enctype="multipart/form-data">{% csrf_token %}
-                    {{ form.username.errors }}
-                <p>Korisnicko ime:</p>
-                    {{ form.username }}
-                    {{ form.password.errors }}
-                <p>Lozinka:</p>
-                    {{ form.password }}
-                <br>
-                    {{ form.non_field_errors }}
-                <br>
-                <button type="submit" class="play_game" >Pocni Igru</button>
-                <button type="submit" class="go_register">Registruj se </button>
-            </form>
-        </div>
-    </body>
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "accounts/login.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static "kviz/inkvizitor.js" %}"></script>
+</head>
+<body>
+<div class="login">
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.username.errors }}
+        <p>Korisnicko ime:</p>
+        {{ form.username }}
+        {{ form.password.errors }}
+        <p>Lozinka:</p>
+        {{ form.password }}
+        <br>
+        {{ form.non_field_errors }}
+        <br>
+        <button type="submit" class="play_game">Pocni Igru</button>
+    </form>
+</div>
+
+<div>
+    <button type="submit" class="go_register" onclick="register()">Registruj Se</button>
+</div>
+</body>
 </html>

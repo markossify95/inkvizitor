@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Rang Lista </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {% load static %}
+    <script src="{% static "kviz/inkvizitor.js" %}"></script>
+    <link rel="stylesheet" href="{% static "kviz/inkvizitor.css" %}">
+</head>
+<body>
+{% if user.is_authenticated %}
+    <div class="logout">
+        <button type="submit" class="logout_button">Odjavi se</button>
+    </div>
+{% else %}
+    <div class="logout">
+        <button type="submit" class="login_button">Prijavi se</button>
+    </div>
+    <div class="logout">
+        <button type="submit" class="login_button">Registruj se</button>
+    </div>
+{% endif %}
+<div>
+    <ol>
+        {% for obj in result_set %}
+            <li class="litem">{{ obj.username }} : {{ obj.score }}</li>
+        {% endfor %}
+    </ol>
+</div>
+
+<div class='category'>
+
+    <div class="new_game">
+        <button class="new_game_button">NOVA IGRA</button>
+    </div> <!--close div witn class="new_game" -->
+</div>
+</body>
+</html>
