@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pronadji Rec </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        {% load static %}
+        <script src="{% static "kviz/inkvizitor.js" %}"></script>
+        <link rel="stylesheet" href="{% static "kviz/inkvizitor.css" %}">
+    </head>
+    <body>
+        <div class="logout">
+            <button type="submit" class="logout_button">Odjavi se</button>
+        </div>
+        
+        <div class='category'>
+            
+            <button class='selection' value='i'>Muska Imena</button>
+            <button class="selection" value='f'>Zenska Imena</button>
+            <button class='selection' value='z'>Zivotinje</button>
+            <button class='selection' value='g'>Gradovi</button>
+      
+            <hr>
+            
+        </div> <!-- close div with class="category" -->
+        
+        <div class='letters'>
+            <button class="letter" name='a'>A</button>
+            <button class="letter" name="b">B</button>
+            <button class="letter" name="c">C</button>
+            <button class="letter" name="d">D</button>
+            <button class="letter" name="e">E</button>
+            <button class="letter" name="f">F</button>
+            <button class="letter" name="g">G</button>
+            <button class='letter' name="h">H</button>
+            <button class="letter" name="i">I</button>
+            <button class="letter" name="j">J</button>
+            <button class="letter" name="k">K</button>
+            <button class="letter" name="l">L</button>
+            <button class="letter" name="m">M</button>
+            <button class="letter" name="n">N</button>
+            <button class="letter" name="o">O</button>
+            <button class="letter" name="p">P</button>
+            <button class="letter" name="r">R</button>
+            <button class="letter" name="s">S</button>
+            <button class="letter" name="t">T</button>
+            <button class="letter" name="u">U</button>
+            <button class="letter" name="v">V</button>
+            <button class="letter" name="z">Z</button>
+            <button class="letter" name="dj">DJ</button>
+            <button class="letter" name="nj">NJ</button>
+            
+                      
+        </div> <!-- close div with class="letters" -->
+        
+        <div class="word">
+            
+        </div> <!-- close div with class="word" -->
+        
+        <div class="faild_letter">
+            <div class='description'>
+                <p>"Imate pravo na 6 promasaja" </p>
+                
+            </div>
+            
+            <div class='number_faild'>
+                <p>Broj vasih promasaja</p>
+                <p class='faild'></p>
+            </div>
+            
+        </div> <!-- close div with class="faild_letter -->
+        <div class ="new_game">
+            <h1 class="game_result"></h1> <br>
+            <button class="new_game_button">NOVA IGRA </button>
+            
+        </div> <!--close div witn class="new_game" -->
+        
+    </body>
+</html>

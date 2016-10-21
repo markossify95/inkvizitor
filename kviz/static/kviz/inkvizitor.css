@@ -1,0 +1,154 @@
+html {
+    background:linear-gradient( #e0ebeb, white, white) no-repeat center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Century Gothic";
+}
+button {
+    font-family: "Century Gothic";
+    font-weight: bold;
+}
+.category {
+    border:1px solid black;
+    height:50px;
+    text-align: center;
+    padding-top: 25px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+
+}
+
+.letters {
+    border: 1px solid #339966;
+    height: 70px;
+    text-align: center;
+    padding-top: 25px;
+
+    background-color: white;
+
+}
+
+.selection {
+    width: 150px;
+    height: 30px;
+    border-radius:20px 0 20px 0;
+    border-style: none;
+    font-size: 20px;
+    background-color: black;
+    color:white;
+     box-shadow: 3px 3px 3px white;
+     font-weight: normal;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border-style: none;
+    font-size: 20px;
+    background-color: black;
+    color:white;
+    box-shadow: 4px 4px 4px grey;
+}
+
+.word {
+
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+    border :1px solid black;
+    border-style: none;
+    height: 40px;
+    text-align: center;
+    letter-spacing: 50px;
+
+}
+
+.disable {
+    background-color: black;
+    color:black;
+     box-shadow: 5px 5px 5px silver;
+}
+
+.clicked {
+    background-color: red;
+    color:black;
+     box-shadow: 8px 8px 5px black;
+     font-weight: bold;
+
+}
+.word p {
+    float:left;
+    font-size: 80px;
+}
+
+.have_letter {
+    background-color: #00ff00;
+
+}
+
+.hoverButton {
+    background-color: #339966;
+    color:whitesmoke;
+
+
+}
+
+.hoverletter {
+   background-color: #e0ebeb;
+   color:#339966
+}
+
+.faild_letter {
+    border: 1px solid black;
+    border-style: none;
+    width:500px;
+    position:absolute;
+    right:0px;
+
+
+}
+.faild_letter {
+    text-align: center;
+    font-size: 40px;
+}
+
+.faild {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.new_game {
+    border:1px solid black;
+    border-style:none;
+    clear: both;
+    position: relative;
+    text-align:center;
+    display: none;
+
+}
+
+.new_game_button {
+    width:400px;
+    height:50px;
+    font-size:30px;
+    border:1px solid #339966;
+    color:#339966;
+    background-color: white;
+    letter-spacing: 3px;
+    word-spacing: 30px;
+
+}
+span{
+    color:red;
+}
+
+.logout {
+    text-align: right;
+}
+.logout_button {
+    width:120px;
+    border:1px solid #339966;
+    background-color: white;
+}

@@ -1,0 +1,41 @@
+html {
+    background:linear-gradient( #e0ebeb, white, white) no-repeat center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:Papyrus, fantasy;
+}
+
+.register_form {
+
+    position: absolute;
+    top:10px;
+    left:30px;
+  
+}
+p {
+     font-size:18px;
+    font-weight: bold;
+}
+
+.register_form input {
+      text-align:center;
+      border:1px solid #339966;
+      
+      
+}
+
+.register {
+     background-color: white;
+    border:1px solid #339966;
+    color: #339966;
+}
+
+.go_login{
+     background-color: #339966;
+    border:1px solid #339966;
+    color: white;
+}
+button {
+    width:150px;
+    
+}
