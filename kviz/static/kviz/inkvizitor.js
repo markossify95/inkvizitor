@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.new_game_button').click(function () {
-        location.reload();
+        window.location.assign("http://127.0.0.1:8000/quiz/");
     });
     $('.new_game_button').mouseenter(function () {
         $(this).css('border', '3px solid #339966');
@@ -143,7 +143,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.login_button').click(function () {
-        window.location.assign("http://127.0.0.1:8000/lo/");
+        window.location.assign("http://127.0.0.1:8000/login/");
     });
 });
 
@@ -154,3 +154,4 @@ function register() {
 function login() {
     window.location.assign("http://127.0.0.1:8000/login/");
 };
+
