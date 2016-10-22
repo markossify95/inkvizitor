@@ -1,12 +1,11 @@
 var new_word;
-var ime_igraca;
-var prezime_igraca;
+var base="http://127.0.0.1:8000/";
 
 
 function getWord(type) {
     var msg = $.ajax({
         type: "GET",
-        url: 'http://127.0.0.1:8000/quiz/word/' + type,
+        url: base + 'quiz/word/' + type,
         async: false
     }).responseText.toLowerCase();
     return msg;
@@ -118,7 +117,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.new_game_button').click(function () {
-        window.location.assign("http://127.0.0.1:8000/quiz/");
+        window.location.assign(base + "quiz/");
     });
     $('.new_game_button').mouseenter(function () {
         $(this).css('border', '3px solid #339966');
@@ -131,27 +130,27 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.logout_button').click(function () {
-        window.location.assign("http://127.0.0.1:8000/logout/");
+        window.location.assign(base + "logout/");
     });
 });
 
 $(document).ready(function () {
     $('.top_ten').click(function () {
-        window.location.assign("http://127.0.0.1:8000/quiz/top/");
+        window.location.assign(base + "quiz/top/");
     });
 });
 
 $(document).ready(function () {
     $('.login_button').click(function () {
-        window.location.assign("http://127.0.0.1:8000/login/");
+        window.location.assign(base + "login/");
     });
 });
 
 function register() {
-    window.location.assign("http://127.0.0.1:8000/register/");
+    window.location.assign(base + "register/");
 };
 
 function login() {
-    window.location.assign("http://127.0.0.1:8000/login/");
+    window.location.assign(base + "login/");
 };
 
