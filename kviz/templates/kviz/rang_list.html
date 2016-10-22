@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     {% load static %}
     <script src="{% static "kviz/inkvizitor.js" %}"></script>
+    <link rel="stylesheet" href="{% static "accounts/login.css" %}">
+    <link rel="stylesheet" href="{% static "accounts/register.css" %}">
     <link rel="stylesheet" href="{% static "kviz/inkvizitor.css" %}">
 </head>
 <body>
@@ -17,10 +19,8 @@
     </div>
 {% else %}
     <div class="logout">
-        <button type="submit" class="login_button">Prijavi se</button>
-    </div>
-    <div class="logout">
-        <button type="submit" class="register" onclick="register()">Registruj se</button>
+        <button type="button" class="go_login">Prijavi se</button>
+        <button type="button" class="register" onclick="register()">Registruj se</button>
     </div>
 {% endif %}
 <div>
@@ -34,7 +34,7 @@
 <div class='category'>
 
     <div>
-        <button type="submit" class="new_game_button">NOVA IGRA</button>
+        <button type="submit" class="new_game_button" onclick="new_game()">NOVA IGRA</button>
     </div> <!--close div witn class="new_game" -->
 </div>
 </body>
